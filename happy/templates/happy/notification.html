@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notification</title>
+</head>
+<body>
+<h1>Your notification is...</h1>
+{{user.last_name}}
+<form action="accept" >
+<h2>Another user</h2>
+{% for dest in eventcheck %}
+{{dest.date}}<br>
+{{dest.type_of_event}}<br>
+{{dest.city}}<br>
+{{dest.first_name}}<br>
+{{dest.last_name}}<br>
+{{dest.phone_no}}<br>
+{{dest.address}}<br>
+{{dest.description}}<br>
+<br>
+{% endfor %}
+
+<input  type="submit" name="submit" class="btn btn-info btn-md" value="Accept">
+
+</form>
+
+</body>
+</html>

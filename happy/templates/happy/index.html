@@ -1,0 +1,9 @@
+{% extends 'happy/layout.html' %}
+{% block body %}
+{% load static %}
+{% if user.is_authenticated%}
+{%for event in Created_events%}
+<h1>{{event.city}}</h1>
+{%endfor%}
+{%endif%}
+{% endblock %}

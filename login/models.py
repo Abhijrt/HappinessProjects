@@ -1,0 +1,11 @@
+#not available
+from django.db import models
+from django.contrib.auth.models import AbstractBaseUser,BaseUserManager
+
+# Create your models here.
+class Account(AbstractBaseUser):
+    is_admin = models.BooleanField(default=False)
+    phone_number = models.IntegerField()
+
+
+
